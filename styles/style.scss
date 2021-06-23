@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+//避免觸及i tag
+i {
+  pointer-events: none;
+}
+body {
+  background: linear-gradient(90deg, rgb(84, 130, 255), rgb(100, 255, 134));
+}
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input,
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+    border-radius: 8px;
+  }
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  button {
+    cursor: pointer;
+    background: rgb(0, 146, 114);
+    color: white;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  div.todo {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.1s ease;
+    p {
+      background: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+    p.todoText {
+      width: 50%;
+    }
+    p.todoTime {
+      width: 20%;
+      text-align: center;
+    }
+    button {
+      padding: 0.25rem 0.5rem;
+      background: none;
+      border: none;
+      margin-left: 0.1rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    button.complete {
+      color: rgb(32, 173, 91);
+      margin-left: 0.5rem;
+    }
+    button.trash {
+      color: white;
+    }
+  }
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem 0rem;
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(0, 146, 114);
+    color: white;
+  }
+}
+.done {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+  opacity: 0.5;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
